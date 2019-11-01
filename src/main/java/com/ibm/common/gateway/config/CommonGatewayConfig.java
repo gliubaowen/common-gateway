@@ -3,39 +3,43 @@
  */
 package com.ibm.common.gateway.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.ibm.common.core.ssh.SftpService;
+import com.ibm.common.core.ftp.FtpClientService;
+import com.ibm.common.core.ssh.SftpClientService;
 
 /**
+ * 配置类
+ * 
  * @author LiuBaoWen
  *
  */
 @Configuration
 public class CommonGatewayConfig {
 
-	/** SFTP 登录用户名 */
-	@Value("${ssh.username}")
-	private String username;
-	/** SFTP 登录密码 */
-	@Value("${ssh.password}")
-	private String password;
-	/** SFTP 服务器地址 */
-	@Value("${ssh.host}")
-	private String host;
-	/** SFTP 端口 */
-	@Value("${ssh.port}")
-	private int port = 22;
-
+	/**
+	 * 开启sftp客户端服务
+	 * 
+	 * @author LiuBaoWen
+	 * @return
+	 */
 	@Bean
-	public SftpService test() {
-		SftpService sftpService = new SftpService();
-		sftpService.setSftpProperties(username, password, host, port);
-		return sftpService;
+	public SftpClientService sftpService() {
+		return new SftpClientService();
+	}
+
+	/**
+	 * 开启ftp客户端服务
+	 * 
+	 * @author LiuBaoWen
+	 * @return
+	 */
+	@Bean
+	public FtpClientService ftpClientService() {
+		return new FtpClientService();
 	}
 
 	@Bean

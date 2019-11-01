@@ -4,7 +4,7 @@
 package com.ibm.common.gateway.exception;
 
 /**
- * common-server异常类
+ * common-gateway异常类
  * 
  * @author LiuBaoWen
  *

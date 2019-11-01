@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * Controller
+ * 
  * @author LiuBaoWen
  *
  */
@@ -15,9 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("service")
 public class CommonGatewayController {
 
-	@GetMapping("test")
-	public String test() {
-
-		return "test";
+	@GetMapping("helloworld")
+	public String helloWorld() {
+		return "Hello Common Gateway!";
 	}
 }
