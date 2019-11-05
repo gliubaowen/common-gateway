@@ -5,4 +5,4 @@
  * @author LiuBaoWen
  *
  */
-package com.ibm.common.gateway.exception;
+package com.lbw.common.gateway.exception;

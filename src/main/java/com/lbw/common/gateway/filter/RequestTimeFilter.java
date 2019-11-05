@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ibm.common.gateway.filter;
+package com.lbw.common.gateway.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

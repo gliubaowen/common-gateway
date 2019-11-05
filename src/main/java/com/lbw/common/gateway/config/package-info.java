@@ -5,4 +5,4 @@
  * @author LiuBaoWen
  *
  */
-package com.ibm.common.gateway.config;
+package com.lbw.common.gateway.config;

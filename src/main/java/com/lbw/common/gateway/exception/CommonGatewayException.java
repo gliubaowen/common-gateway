@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ibm.common.gateway.exception;
+package com.lbw.common.gateway.exception;
 
 /**
  * common-gateway异常类

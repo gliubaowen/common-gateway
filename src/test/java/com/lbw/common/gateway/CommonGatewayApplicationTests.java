@@ -1,4 +1,4 @@
-package com.ibm.common.gateway;
+package com.lbw.common.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

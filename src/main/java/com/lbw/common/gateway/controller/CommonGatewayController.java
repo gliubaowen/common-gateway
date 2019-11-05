@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ibm.common.gateway.controller;
+package com.lbw.common.gateway.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

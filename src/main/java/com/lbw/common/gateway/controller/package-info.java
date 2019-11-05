@@ -5,4 +5,4 @@
  * @author LiuBaoWen
  *
  */
-package com.ibm.common.gateway.filter;
+package com.lbw.common.gateway.controller;
