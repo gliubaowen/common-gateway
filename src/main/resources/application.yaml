@@ -1,29 +1,37 @@
 server:
-   port: 82
-   servlet:
-      context-path: /common-gateway
+  port: 82
+  servlet:
+    context-path: /common-gateway
 spring:
-   devtools:
-      restart:
-         enabled: true # 热部署开关，false即不启用热部署
-         exclude: test/** # 指定目录不更新
+  devtools:
+    restart:
+      enabled: true # 热部署开关，false即不启用热部署
+      exclude: test/** # 指定目录不更新
 #         additional-paths: src/main/java # 指定热部署的目录
-#log logging.path he logging.file 同时配置只会生效一个 
+  cloud:
+    gateway:
+      routes:
+        - id: blog
+          uri: http://localhost:80
+          predicates:
+            # 匹配路径转发
+#            - Path=/test
+            - Method=GET          
+#log logging.path he logging.file 同时配置只会生效一个
 logging:
-   path: /opt/log/common-gateway/
-   file: /opt/log/common-gateway/common-gateway.log
-   level:
-      root: DEBUG
+  path: /opt/log/common-gateway/
+  file: /opt/log/common-gateway/common-gateway.log
+  level:
+    root: DEBUG
 #ssh
 ssh:
-   host: 127.0.0.1
-   username: root
-   password: 123/abc
-   port: 22
+  host: 127.0.0.1
+  username: root
+  password: 123/abc
+  port: 22
 # ftp
 ftp:
-   host: 127.0.0.1
-   port: 21
-   username: null
-   password: null  
-
+  host: 127.0.0.1
+  port: 21
+  username: null
+  password: null
